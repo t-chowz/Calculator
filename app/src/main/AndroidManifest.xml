@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyCalculator">
         <activity
+            android:name=".divActivity"
+            android:exported="true" />
+        <activity
+            android:name=".multActivity"
+            android:exported="true" />
+        <activity
+            android:name=".subActivity"
+            android:exported="true" />
+        <activity
+            android:name=".addActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

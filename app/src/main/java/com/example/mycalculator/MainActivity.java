@@ -2,6 +2,7 @@ package com.example.mycalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -53,16 +54,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToAdd(int n, int m ){
+        int val = n + m;
+        String str = String.valueOf(val);
 
+        Intent intent = new Intent(this, addActivity.class);
+        intent.putExtra("value", str);
+        startActivity(intent);
     }
     public void goToSub(int n, int m ){
+        int val = n - m;
+
+        Intent intent = new Intent(this, subActivity.class);
+        intent.putExtra("value", n );
+
+        startActivity(intent);
 
     }
     public void goToMult(int n, int m ){
+        int val = n * m;
+        Intent intent = new Intent(this, multActivity.class);
+        intent.putExtra("value", n );
 
+        startActivity(intent);
     }
     public void goToDiv(int n, int m ){
+        int val = n/m;
 
+        Intent intent = new Intent(this, divActivity.class);
+        intent.putExtra("value", n );
+
+        startActivity(intent);
     }
 
 
