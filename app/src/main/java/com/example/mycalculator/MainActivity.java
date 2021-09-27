@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         String str = number1.getText().toString();
         String str2 = number2.getText().toString();
         int n1 =Integer.parseInt(str);
-        int n2 = Integer.parseInt(str);
+        int n2 = Integer.parseInt(str2);
         goToAdd(n1, n2 );
 
     }
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         String str = number1.getText().toString();
         String str2 = number2.getText().toString();
         int n1 = Integer.parseInt(str);
-        int n2 = Integer.parseInt(str);
+        int n2 = Integer.parseInt(str2);
         goToSub(n1, n2 );
 
     }
@@ -37,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         String str = number1.getText().toString();
         String str2 = number2.getText().toString();
         int n1 =Integer.parseInt(str);
-        int n2 = Integer.parseInt(str);
-        goToMult(n1, n2 );
+        int n2 = Integer.parseInt(str2);
+        goToMulti(n1, n2 );
 
     }
     //button4
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         String str = number1.getText().toString();
         String str2 = number2.getText().toString();
         int n1 =Integer.parseInt(str);
-        int n2 = Integer.parseInt(str);
+        int n2 = Integer.parseInt(str2);
         goToDiv(n1, n2 );
 
     }
@@ -63,26 +63,27 @@ public class MainActivity extends AppCompatActivity {
     }
     public void goToSub(int n, int m ){
         int val = n - m;
+        String str = String.valueOf(val);
 
-        Intent intent = new Intent(this, subActivity.class);
-        intent.putExtra("value", n );
-
+        Intent intent = new Intent(this, addActivity.class);
+        intent.putExtra("value", str);
         startActivity(intent);
 
     }
-    public void goToMult(int n, int m ){
+    public void goToMulti(int n, int m ){
         int val = n * m;
-        Intent intent = new Intent(this, multActivity.class);
-        intent.putExtra("value", n );
+        String str = String.valueOf(val);
 
+        Intent intent = new Intent(this, addActivity.class);
+        intent.putExtra("value", str);
         startActivity(intent);
     }
     public void goToDiv(int n, int m ){
         int val = n/m;
+        String str = String.valueOf(val);
 
-        Intent intent = new Intent(this, divActivity.class);
-        intent.putExtra("value", n );
-
+        Intent intent = new Intent(this, addActivity.class);
+        intent.putExtra("value", str);
         startActivity(intent);
     }
 
